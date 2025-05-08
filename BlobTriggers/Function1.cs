@@ -61,6 +61,7 @@ namespace BlobTriggers
                     using (var outputStream = new MemoryStream())
                     {
                         image.Save(outputStream, exportOptions);
+                        var jpegName= Path.ChangeExtension(name, ".jpeg");
                         return outputStream.ToArray();
 
 
